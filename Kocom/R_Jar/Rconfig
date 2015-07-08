@@ -1,0 +1,11 @@
+Service_DB_Host=
+Service_DB_Port=
+Service_DB_Name=
+User_DB_Host=
+User_DB_Port=
+User_DB_Name=
+Public_DB_Host=
+Public_DB_Port=
+Public_DB_Name=
+MQTT_Server_Host=
+MQTT_Server_Port=
