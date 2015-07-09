@@ -1,0 +1,5 @@
+cat("==========================================================================")
+install.packages("RSclient", repos="http://cran.nexr.com")
+cat("==========================================================================")
+install.packages("CEMS_0.2.tar.gz", repos=NULL, type="source")
+cat("==================     R Packages install complete.     ==================")
