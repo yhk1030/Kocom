@@ -1,6 +1,6 @@
-DB_Host=localhost
+DB_Host=127.0.0.1
 DB_Port=30000
-R_Host=localhost
+R_Host=127.0.0.1
 R_Port=6311
-MQTT_Host=localhost
+MQTT_Host=127.0.0.1
 MQTT_Port=1883
