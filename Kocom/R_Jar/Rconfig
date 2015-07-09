@@ -1,4 +1,4 @@
-Service_DB_Host=
+Service_DB_Host=localhost
 Service_DB_Port=
 Service_DB_Name=
 User_DB_Host=
