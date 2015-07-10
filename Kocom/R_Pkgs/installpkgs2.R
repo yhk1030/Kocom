@@ -1,5 +1,5 @@
 cat("==========================================================================")
-install.packages("RSclient_0.7-2.tar.gz",  repos=NULL, type="source")
+install.packages("RSclient_0.7-2.tar.gz", repos=NULL, type="source")
 cat("==========================================================================")
 install.packages("CEMS_0.2.tar.gz", repos=NULL, type="source")
 cat("==================     R Packages install complete.     ==================")
