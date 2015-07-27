@@ -1,6 +1,6 @@
 Service_DB_Host=localhost
 Service_DB_Port=30000
-Service_DB_Name=service
+Service_DB_Name=
 User_DB_Host=localhost
 User_DB_Port=30000
 User_DB_Name=
