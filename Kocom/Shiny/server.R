@@ -6,18 +6,19 @@ library(CEMS)
 shinyServer(function(input, output, session) {
 
   output$ListUI <- renderUI({
-    if(is.null(tabledata())) {fluidPage(h1("서비스를 생성해주세요."))}
-    else {fluidPage(
-    h2("서비스 정보"),
-    checkboxGroupInput("servicelist", label = "",
-                       choices = tabledata(), selected = NULL),
-    actionButton("serviceremove", label = "제거"),
-    isolate({
-      input$serviceremove
-      invalidateLater(1000 * 60 * 5, session = NULL)
-      })
-    )}
-    })
+    if(is.null(tabledata())) {
+      fluidPage(h1("서비스를 생성해주세요."),
+                actionButton("refreshlist", "Refresh")
+      )
+    }
+    else {
+      fluidPage(
+        h2("서비스 정보"),
+        checkboxGroupInput("servicelist", label = "",
+                           choices = tabledata(), selected = NULL),
+        actionButton("serviceremove", label = "제거")
+      )}
+  })
   
   output$text <- renderText({
     invalidateLater(1000, session = NULL)
@@ -134,7 +135,8 @@ shinyServer(function(input, output, session) {
   #                             SERVICE LIST                             #
   ##############################    FUNC    ##############################
   tabledata <- reactive({
-    
+    input$refreshlist
+    input$serviceremove
     res.frame <- data.frame() 
     
     cursor <- mongo.find(mongo=mongo_service,
